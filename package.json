@@ -1,22 +1,67 @@
 {
-  "name": "shopee-clone-react-typescript",
+  "name": "practice-RTK-query",
   "private": true,
   "version": "0.0.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
+    "prepare": "husky install",
+    "lint:fix": "eslint --fix --ext .ts,tsx,js,jsx src/ --ignore-path .gitignore",
+    "prettier:fix": "prettier --ignore-path .gitignore -w \"src/**/*.{js,jsx,ts,tsx,css,scss,html}\"",
+    "lint": "yarn lint:fix && yarn prettier:fix",
     "preview": "vite preview"
   },
+  "lint-staged": {
+    "**/*.{js,ts,jsx,tsx}": [
+      "yarn run lint",
+      "git add ."
+    ]
+  },
+  "commitlint": {
+    "extends": [
+      "@commitlint/config-conventional"
+    ]
+  },
+  "husky": {
+    "hooks": {
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+    }
+  },
   "dependencies": {
+    "@reduxjs/toolkit": "^1.9.3",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "react-redux": "^8.0.5"
   },
   "devDependencies": {
+    "@commitlint/cli": "^17.4.4",
+    "@commitlint/config-conventional": "^17.4.4",
     "@types/react": "^18.0.27",
     "@types/react-dom": "^18.0.10",
+    "@typescript-eslint/eslint-plugin": "^5.0.0",
+    "@typescript-eslint/parser": "^5.54.1",
     "@vitejs/plugin-react": "^3.1.0",
-    "typescript": "^4.9.3",
+    "eslint": "^8.36.0",
+    "eslint-config-prettier": "^8.7.0",
+    "eslint-config-standard-with-typescript": "^34.0.0",
+    "eslint-plugin-import": "^2.25.2",
+    "eslint-plugin-jest-dom": "^4.0.3",
+    "eslint-plugin-jsx-a11y": "^6.7.1",
+    "eslint-plugin-n": "^15.0.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "eslint-plugin-promise": "^6.0.0",
+    "eslint-plugin-react": "^7.32.2",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "eslint-plugin-simple-import-sort": "^10.0.0",
+    "eslint-plugin-testing-library": "^5.10.2",
+    "husky": "^8.0.3",
+    "lint-staged": "^13.2.0",
+    "prettier": "^2.8.4",
+    "typescript": "*",
     "vite": "^4.1.0"
-  }
+  },
+  "repository": "git@github.com:huuthe1999/shopee-clone-react-typescript.git",
+  "author": "huuthe1999 <huuthe128@gmail.com>",
+  "license": "MIT"
 }
