@@ -7,8 +7,8 @@
     "dev": "vite",
     "build": "tsc && vite build",
     "prepare": "husky install",
-    "lint:fix": "eslint --fix --ext .ts,tsx,js,jsx src/ --ignore-path .gitignore",
-    "prettier:fix": "prettier --ignore-path .gitignore -w \"src/**/*.{js,jsx,ts,tsx,css,scss,html}\"",
+    "lint:fix": "eslint --fix --ext .ts,.tsx,.js,.jsx src/ --ignore-path .gitignore",
+    "prettier:fix": "prettier --ignore-path .gitignore -w \"src/**/*.{js,jsx,ts,tsx,css,scss}\"",
     "lint": "yarn lint:fix && yarn prettier:fix",
     "preview": "vite preview"
   },
@@ -30,6 +30,7 @@
   },
   "dependencies": {
     "@reduxjs/toolkit": "^1.9.3",
+    "axios": "^1.3.4",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-redux": "^8.0.5"
@@ -37,6 +38,7 @@
   "devDependencies": {
     "@commitlint/cli": "^17.4.4",
     "@commitlint/config-conventional": "^17.4.4",
+    "@types/jest": "^29.5.0",
     "@types/react": "^18.0.27",
     "@types/react-dom": "^18.0.10",
     "@typescript-eslint/eslint-plugin": "^5.0.0",
@@ -45,6 +47,7 @@
     "eslint": "^8.36.0",
     "eslint-config-prettier": "^8.7.0",
     "eslint-config-standard-with-typescript": "^34.0.0",
+    "eslint-import-resolver-typescript": "^3.5.3",
     "eslint-plugin-import": "^2.25.2",
     "eslint-plugin-jest-dom": "^4.0.3",
     "eslint-plugin-jsx-a11y": "^6.7.1",
@@ -53,7 +56,6 @@
     "eslint-plugin-promise": "^6.0.0",
     "eslint-plugin-react": "^7.32.2",
     "eslint-plugin-react-hooks": "^4.6.0",
-    "eslint-plugin-simple-import-sort": "^10.0.0",
     "eslint-plugin-testing-library": "^5.10.2",
     "husky": "^8.0.3",
     "lint-staged": "^13.2.0",
@@ -61,7 +63,7 @@
     "typescript": "*",
     "vite": "^4.1.0"
   },
-  "repository": "git@github.com:huuthe1999/shopee-clone-react-typescript.git",
+  "repository": "git@github.com:huuthe1999/practice-RTK-query.git",
   "author": "huuthe1999 <huuthe128@gmail.com>",
   "license": "MIT"
 }

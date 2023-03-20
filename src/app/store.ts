@@ -1,7 +1,9 @@
 import { Action, configureStore, ThunkAction } from '@reduxjs/toolkit'
 
+import { counterReducer } from '~/features/counter'
+
 export const store = configureStore({
-  reducer: {}
+  reducer: { counter: counterReducer }
 })
 
 export type AppDispatch = typeof store.dispatch

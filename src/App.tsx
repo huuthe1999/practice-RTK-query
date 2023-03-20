@@ -2,6 +2,8 @@ import './App.css'
 
 import { useState } from 'react'
 
+import Counter from '~/features/counter'
+
 import reactLogo from './assets/react.svg'
 
 function App() {
@@ -17,9 +19,10 @@ function App() {
           <img src={reactLogo} className="logo react" alt="React logo" />
         </a>
       </div>
+      <Counter />
       <h1>Vite + React + Typescript + Eslint + Prettier + Husky</h1>
       <div className="card">
-        <button onClick={() => setCount(count => count + 1)}>count is {count}</button>
+        <button onClick={() => setCount((count) => count + 1)}>count is {count}</button>
         <p>
           Edit <code>src/App.tsx</code> and save to test HMR
         </p>
